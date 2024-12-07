@@ -1,0 +1,34 @@
+{% extends 'adminbase.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h3>
+	View Appointements<br><br>
+</h2>
+</h3>
+<center>
+				<table id="tab" width="70%">
+<tr>
+	<th width="10%">Sno<th><center>Doc ID<th><center>Patient Name<th><center>Date<th><center>Time Slot<th><center>Status
+
+
+				{% for d in data %}
+<tr><td>{{forloop.counter}}<td><center>{{d.docid}}<td><center>{{d.pname}}
+
+<td><center>{{d.dat_e}}
+<td><center>{{d.tim_e}}
+<td><center>{{d.stz}}
+</tr>
+				{% endfor %}
+</table>
+
+{% endblock %}

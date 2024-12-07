@@ -1,0 +1,33 @@
+
+{% extends 'adminbase.html' %}
+{% block content %}
+
+
+<font size="+1" color="#6600ff">{{msg}}
+</font>
+
+
+<table id="tab" width="100%"> <tr><th><center>
+<h2>Training</h2>
+
+<form action="/nbtrain/" method="post">
+{% csrf_token %}<input type="submit" class="form-control" value="Naive Bayes Classifier">	</form>
+
+<form action="/rftrain/" method="post">
+{% csrf_token %}<input type="submit" class="form-control" value="Random Forest Classifier">	</form>
+
+<form action="/nntrain/" method="post">
+{% csrf_token %}<input type="submit" class="form-control" value="Neural Networks Classifier">	</form>
+				
+<form action="/svmtrain/" method="post">
+{% csrf_token %}<input type="submit" class="form-control" value="SVM Classifier">	</form>
+<td><center>
+<h2>Testing</h2>
+<form action="/testing/" method="post">
+{% csrf_token %}<input type="submit" class="form-control" value="Testing Process">	</form>
+</table>
+<center>
+	<a href="/viewacc"><h4>Performance Evaluation</a></li>
+ 							
+
+{% endblock %}

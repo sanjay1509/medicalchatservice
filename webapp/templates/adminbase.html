@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Admin Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong><h2>
+									Medical Chatbot Service
+									</h2></strong></a>
+								</header>
+
+							<!-- Content -->
+								<section>
+
+       {% block content %}
+                        {% endblock %}
+
+
+
+ 								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									
+							<header class="major">
+										<!--<h2>Profile Pic</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										</article>
+									</div>
+						 -->	<header class="major">
+										<h2>Menu</h2>
+									</header>
+							
+									<ul>
+										<li><a href="/adminhome"><h4>Home</a></li>
+									 <li><a href="/training"><h4>Classification</a></li>
+								
+									<li><a href="/upload"><h4>Datasets</a></li>
+									<li><a href="/adddata"><h4>Queries</a></li>
+									<li><a href="/adddoctor"><h4>Doctors</a></li>
+									<li><a href="/viewapp"><h4>Appointments</a></li>
+
+									<li><a href="/adminlogout"><h4>Logout</a></li>
+
+										<!-- <li>
+											<span class="opener">Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+	 -->							</ul>
+								</nav>		
+
+			
+							<!-- Section -->
+						
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+	</body>
+</html>

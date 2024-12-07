@@ -1,0 +1,42 @@
+
+
+{% extends 'adminbase.html' %}
+
+{% block content %}
+
+	
+<h5>{{msg}}</h5>
+	
+	 <h3>Add Doctors</h3>
+<center>
+
+	
+<form method="post" action="/adddoctor/">
+	{% csrf_token %}
+<table width="90%">
+<tr>
+	<td><b><font color="black">Doc ID<td>
+	<input type="text" name="no"value="{{no}}" required width="100%"></td>
+		<tr><td><b><font color="black">Select Disease<td>
+<select name="dis">
+{% for d in diseases %}
+	<option value="{{d}}">{{d}}
+
+{% endfor %}
+
+</select>
+
+
+	<tr><td><b><font color="black">Name<td>
+	<input type="text" name="name" required width="100%"> </td>
+	<tr><td><b><font color="black">Designation<td>
+	<input type="text" name="des" required width="100%"> </td>
+	<tr><td><b><font color="black">Address<td>
+	<input type="text" name="addr" required width="100%"> </td>
+	<tr><td><b><font color="black"><a href="/viewdoc/"><h4>View Doctors</h4></a></td><td><input type="submit" value="Add"> 
+</tr>
+</table>
+</form>
+</center>
+
+{% endblock %}

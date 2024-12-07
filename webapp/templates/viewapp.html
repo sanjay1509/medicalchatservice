@@ -1,0 +1,31 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h3>
+	View Appointments<br><br>
+</h2>
+</h3>
+<center>
+<table id="tab">
+<tr><form method="post" action="/viewapp/">
+ {% csrf_token %}
+	
+	<td><h5>Select Date:</h2> <input type="date" name="dt" required ></td>
+</tr><tr><td><input type="submit" value="Get">
+</table>
+</form>
+
+
+</table>
+
+<center><br><br>
+
+         
+	
+{% endblock %}
